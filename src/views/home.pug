@@ -1,7 +1,11 @@
-doctype html
-html(lang="ko")
-    head 
-        title BLOOS
-    body 
-        h1 🌌BLOOS
-    include partials/footer.pug
+extends base.pug
+include mixins/video
+
+block content 
+    h2 Welcome here you will see Trending Videos
+    ul 
+    each vInfo in videos
+        +video(vInfo)
+    else
+        li Sorry, nothing found🙁
+        

@@ -1,4 +1,32 @@
-export const trending = (req, res) => res.render("home"); // render home.pug
+export const trending = (req, res) => {
+  const videos = [
+    {
+      title: "Video 1",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 mins ago",
+      views: 20,
+      id: 1,
+    },
+    {
+      title: "Video 2",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 mins ago",
+      views: 20,
+      id: 1,
+    },
+    {
+      title: "Video 3",
+      rating: 5,
+      comments: 2,
+      createdAt: "2 mins ago",
+      views: 20,
+      id: 1,
+    },
+  ];
+  res.render("home", { pageTitle: "Home", videos }); // render home.pug
+};
 export const see = (req, res) => res.render("watch");
 export const edit = (req, res) => res.render("edit");
 export const search = (req, res) => res.send("Search");
