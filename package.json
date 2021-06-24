@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "videos share platform",
   "scripts": {
-    "sts": "nodemon --exec babel-node src/server.js"
+    "sts": "nodemon --exec babel-node src/init.js"
   },
   "repository": {
     "type": "git",
