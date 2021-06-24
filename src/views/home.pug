@@ -3,9 +3,8 @@ include mixins/video
 
 block content 
     h2 Welcome here you will see Trending Videos
-    ul 
-    each vInfo in videos
-        +video(vInfo)
+    each video in videos
+        +video(video)
     else
         li Sorry, nothing found🙁
         
