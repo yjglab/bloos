@@ -118,7 +118,7 @@ export const finishGithubLogin = async (req, res) => {
     if (!user) {
       user = await User.create({
         avatarUrl: userData.avatar_url,
-        name: userData.name, //? userData.name : "No GitHub name"
+        name: userData.name ? userData.name : "noname",
         username: userData.login,
         email: emailObj.email,
         password: "",
@@ -149,6 +149,17 @@ export const postEdit = async (req, res) => {
     body: { name, email, username, location },
   } = req; // const x = req.session.user.x
 
+  const beforeUsername = await User.findOne({ username });
+  const beforeEmail = await User.findOne({ email });
+  if (
+    (beforeUsername && beforeUsername._id != _id) ||
+    (beforeEmail && beforeEmail._id != _id)
+  ) {
+    return res.status(400).render("edit-profile", {
+      pageTitle: "Edit Profile",
+      errorMessage: "This username or email is already taken.",
+    });
+  }
   const updatedUser = await User.findByIdAndUpdate(
     _id,
     {
