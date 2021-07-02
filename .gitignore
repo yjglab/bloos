@@ -1,3 +1,5 @@
 /node_modules
 /devnote.txt
 /.env
+/uploads
+/.vscode
