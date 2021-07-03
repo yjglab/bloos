@@ -1,4 +1,4 @@
-# [bloos] : no wait, watch and share.
+# bloos : no wait, watch and share.
 
 ![로고1-rl-01](https://user-images.githubusercontent.com/70316567/124315717-4f3ba200-dbaf-11eb-81ed-d9f280b46593.jpg)
 
