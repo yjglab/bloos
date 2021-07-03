@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "videos share platform",
   "scripts": {
-    "sts": "nodemon --exec babel-node src/init.js",
-    "assets": "webpack --config webpack.config.js"
+    "sts:server": "nodemon",
+    "sts:assets": "webpack"
   },
   "repository": {
     "type": "git",
