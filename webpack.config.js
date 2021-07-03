@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   entry: "./src/client/js/main.js",
   mode: "development",
-  watch: true,
+  watch: true, // have to run 2 consoles.(client & backend)
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/styles.css",

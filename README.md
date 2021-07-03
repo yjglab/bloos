@@ -1,26 +1,22 @@
-# bloos : no wait, watch and share.
+# bloos | no wait, watch and share.
 
-![로고1-rl-01](https://user-images.githubusercontent.com/70316567/124315717-4f3ba200-dbaf-11eb-81ed-d9f280b46593.jpg)
+![bloos_tranparent_logo](https://user-images.githubusercontent.com/70316567/124350947-83a47200-dc32-11eb-9f4a-565709348597.png)
 
-**bloos** : Video Sharing Platform.
+**bloos** is a Video Sharing Platform.
 
-## Making list
+### Update List
 
 ---
 
-- / => Home
-- /join => Join
-- /login => Login
-- /search => Search
-
-- /users/:id => See User
-- /users/logout => Log Out
-- /users/edit => Edit My Profile
-- /users/delete => Delete My Profile
-
-- /videos/:id => See Video
-- /videos/:id/edit => Edit Video
-- /videos/:id/delete => Delete Video
-- /videos/upload => Upload Video
+- NodeJS with Express initial setup completed. (21.06.23)
+- Nodemon, Babel setup completed. (21.06.24)
+- Routers setup completed. (21.06.25)
+- Pug Templates setup completed. (21.06.26)
+- MongoDB & Mongoose setup completed. (21.06.28)
+- GitHub Login setup completed. (21.06.29)
+- Profile setup updated. (21.06.30)
+- Server Bug fixed. (21.06.30)
+- Video Uploads, Edit, Delete function updated. (21.07.02)
+- Webpack Configuration, nodemon setup completed. (21.07.03)
 
 ---
