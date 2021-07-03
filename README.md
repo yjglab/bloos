@@ -1,6 +1,6 @@
 # bloos | no wait, watch and share.
 
-![bloos_tranparent_logo](https://user-images.githubusercontent.com/70316567/124350997-ce25ee80-dc32-11eb-86ca-45366c605124.png)
+![bloos_logo_01-01-300-01-01](https://user-images.githubusercontent.com/70316567/124351090-62905100-dc33-11eb-99a3-078d8c5e931c.png)
 
 **bloos** is a Video Sharing Platform.
 
@@ -20,3 +20,5 @@
 - Webpack Configuration, nodemon setup completed. (21.07.03)
 
 ---
+
+![bloos_tranparent_logo](https://user-images.githubusercontent.com/70316567/124351096-66bc6e80-dc33-11eb-94e2-2af9f960c18d.png)
