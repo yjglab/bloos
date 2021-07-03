@@ -1,6 +1,6 @@
 # bloos | no wait, watch and share.
 
-![bloos_tranparent_logo](https://user-images.githubusercontent.com/70316567/124350947-83a47200-dc32-11eb-9f4a-565709348597.png)
+![bloos_tranparent_logo](https://user-images.githubusercontent.com/70316567/124350997-ce25ee80-dc32-11eb-86ca-45366c605124.png)
 
 **bloos** is a Video Sharing Platform.
 
