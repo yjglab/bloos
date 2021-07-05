@@ -18,6 +18,7 @@
 - Server Bug fixed. (21.06.30)
 - Video Uploads, Edit, Delete function updated. (21.07.02)
 - Webpack Configuration, nodemon setup completed. (21.07.03)
+- Add basic stylesheets. (21.07.05)
 
 ---
 
