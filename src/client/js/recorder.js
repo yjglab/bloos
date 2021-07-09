@@ -3,8 +3,14 @@ const recVideo = document.getElementById("preview");
 
 let stream;
 let recorder;
-
-const handleDownload = () => {};
+let videoFile;
+const handleDownload = () => {
+  const a = document.createElement("a");
+  a.href = videoFile;
+  a.download = "my_bloos.webm";
+  document.body.appendChild(a);
+  a.click();
+};
 const handleStop = () => {
   startBtn.innerText = "DOWNLOAD";
   startBtn.removeEventListener("click", handleStop);
@@ -15,9 +21,9 @@ const handleStart = () => {
   startBtn.innerText = "STOP";
   startBtn.removeEventListener("click", handleStart);
   startBtn.addEventListener("click", handleStop);
-  recorder = new MediaRecorder(stream);
+  recorder = new MediaRecorder(stream, { mimeType: "video/webm" });
   recorder.ondataavailable = (e) => {
-    const videoFile = URL.createObjectURL(e.data);
+    videoFile = URL.createObjectURL(e.data);
     recVideo.srcObject = null;
     recVideo.src = videoFile;
     recVideo.loop = true;
