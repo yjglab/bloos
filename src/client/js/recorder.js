@@ -66,16 +66,16 @@ const handleDownload = async () => {
   actionBtn.innerText = "ACTION AGAIN";
   actionBtn.addEventListener("click", handleStart);
 };
-const handleStop = () => {
-  actionBtn.innerText = "DOWNLOAD ACTION";
-  actionBtn.removeEventListener("click", handleStop);
-  actionBtn.addEventListener("click", handleDownload);
-  recorder.stop();
-};
+// const handleStop = () => {
+//   actionBtn.innerText = "DOWNLOAD ACTION";
+//   actionBtn.removeEventListener("click", handleStop);
+//   actionBtn.addEventListener("click", handleDownload);
+//   recorder.stop();
+// };
 const handleStart = () => {
-  actionBtn.innerText = "STOP";
+  actionBtn.innerText = "Proceeding";
+  actionBtn.disabled = true;
   actionBtn.removeEventListener("click", handleStart);
-  actionBtn.addEventListener("click", handleStop);
   recorder = new MediaRecorder(stream, { mimeType: "video/webm" });
   recorder.ondataavailable = (e) => {
     videoFile = URL.createObjectURL(e.data);
@@ -83,14 +83,23 @@ const handleStart = () => {
     recVideo.src = videoFile;
     recVideo.loop = true;
     recVideo.play();
+    actionBtn.innerText = "Download";
+    actionBtn.disabled = false;
+    actionBtn.addEventListener("click", handleDownload);
   };
   recorder.start();
+  setTimeout(() => {
+    recorder.stop();
+  }, 5000);
 };
 
 const init = async () => {
   stream = await navigator.mediaDevices.getUserMedia({
     audio: false,
-    video: true,
+    video: {
+      width: 1024,
+      height: 576,
+    },
   });
   recVideo.srcObject = stream;
   recVideo.play();

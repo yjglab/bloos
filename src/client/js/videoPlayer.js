@@ -18,6 +18,7 @@ let controlsTimeout = null;
 let controlsMovementTimeout = null;
 let volumeValue = 0.5;
 video.volume = volumeValue;
+video.autoplay = true; //
 
 const handlePlayClick = (e) => {
   if (video.paused) {
@@ -61,7 +62,6 @@ const handleLoadedMetadata = () => {
 const handleTimeUpdate = () => {
   currentTime.innerText = formatTime(Math.floor(video.currentTime));
   timeline.value = video.currentTime;
-  console.log(video.currentTime);
 };
 const handleTimelineChange = (e) => {
   const {
