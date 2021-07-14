@@ -129,4 +129,4 @@ video.addEventListener("dblclick", handleFullscreen); //
 video.addEventListener("click", handlePlayClick); //
 timeline.addEventListener("input", handleTimelineChange);
 fullScreenBtn.addEventListener("click", handleFullscreen);
-window.addEventListener("keydown", handleVideoKeyDown); //
+video.addEventListener("keydown", handleVideoKeyDown); //
