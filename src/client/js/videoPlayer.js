@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 const video = document.querySelector("video");
 const playBtn = document.getElementById("play");
 const playBtnIcon = playBtn.querySelector("i");
@@ -18,8 +16,7 @@ let controlsTimeout = null;
 let controlsMovementTimeout = null;
 let volumeValue = 0.5;
 video.volume = volumeValue;
-video.autoplay = true; //
-
+video.autoplay = true;
 const handlePlayClick = (e) => {
   if (video.paused) {
     video.play();
@@ -61,7 +58,7 @@ const handleLoadedMetadata = () => {
 
 const handleTimeUpdate = () => {
   currentTime.innerText = formatTime(Math.floor(video.currentTime));
-  timeline.value = video.currentTime;
+  timeline.value = Math.floor(video.currentTime);
 };
 const handleTimelineChange = (e) => {
   const {
@@ -120,7 +117,7 @@ const handleEnded = () => {
 playBtn.addEventListener("click", handlePlayClick);
 muteBtn.addEventListener("click", handleMuteClick);
 volumeRange.addEventListener("input", handleVolumeChange);
-video.addEventListener("loadeddata", handleLoadedMetadata);
+video.addEventListener("loadedmetadata", handleLoadedMetadata);
 video.addEventListener("timeupdate", handleTimeUpdate);
 video.addEventListener("ended", handleEnded);
 videoContainer.addEventListener("mousemove", handleMouseMove);
