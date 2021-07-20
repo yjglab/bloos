@@ -42,7 +42,7 @@ export const postEdit = async (req, res) => {
     body: { description, title, hashtags },
   } = req;
   const video = await Video.exists({ _id: id });
-  // const video = await Video.findById(id);
+
   if (!video) {
     return res.status(404).render("404", { pageTitle: "Video not found" });
   }
@@ -64,11 +64,12 @@ export const getUpload = (req, res) => {
 };
 export const postUpload = async (req, res) => {
   const {
-    user: { _id },
-  } = req.session;
-
-  const { video, thumb } = req.files;
-  const { title, description, hashtags } = req.body;
+    session: {
+      user: { _id },
+    },
+    files: { video, thumb },
+    body: { title, description, hashtags },
+  } = req;
   try {
     const newVideo = await Video.create({
       // verify data

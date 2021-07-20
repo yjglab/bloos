@@ -30,11 +30,12 @@ app.use(
 
 app.use(flash());
 app.use(localsMiddleware); // order important
-app.use("/uploads", express.static("uploads")); // exposed to the browser
-app.use("/static", express.static("assets"));
 app.use("/", rootRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
+
+app.use("/uploads", express.static("uploads")); // exposed to the browser
+app.use("/static", express.static("assets"));
 app.use("/api", apiRouter);
 app.use(
   "/static",

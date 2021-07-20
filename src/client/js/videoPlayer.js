@@ -17,6 +17,8 @@ let controlsMovementTimeout = null;
 let volumeValue = 0.5;
 video.volume = volumeValue;
 video.autoplay = true;
+playBtnIcon.classList = "fas fa-pause";
+
 const handlePlayClick = (e) => {
   if (video.paused) {
     video.play();
